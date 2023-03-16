@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+}
+
+:root {
+    --Cyan: hsl(179, 62%, 43%);
+    --Bright-Yellow: hsl(71, 73%, 54%);
+    --Light-Gray: hsl(204, 43%, 93%);
+    --Grayish-Blue: hsl(218, 22%, 67%);
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Karla', sans-serif;
+    background-color: var(--Light-Gray);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 100px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "header header";
+    grid-auto-rows: minmax(180px, auto);
+    max-width: 550px;
+    height: 420px;
+    margin-bottom: 30px;
+}
+
+.items {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#item1 {
+    grid-area: header;
+    background-color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+h2 {
+    color: var(--Cyan);
+}
+
+#item1 h3 {
+    color: var(--Bright-Yellow);
+}
+
+#item1 p {
+    color: var(--Grayish-Blue);
+}
+
+#item2 {
+    background-color: var(--Cyan);
+    color: white;
+    border-bottom-left-radius: 10px;
+}
+
+.subs {
+    display: flex;
+    align-items: center;
+}
+
+#dollar {
+    font-size: 30px;
+    padding-right: 10px;
+}
+
+#time {
+    color: hsl(179, 62%, 60%);
+}
+
+button {
+    background-color: var(--Bright-Yellow);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 0;
+    box-shadow: 2px 5px 20px rgba(95, 94, 94, 0.664)
+}
+
+#item3 {
+    background-color: hsl(179, 62%, 60%);
+    color: white;
+    border-bottom-right-radius: 10px;
+}
+
+.para {
+    color: rgba(255, 255, 255, 0.664);
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media (max-width: 696px) {
+    body {
+        font-size: 13px;
+        padding: 10px 0;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 260px;
+        padding-bottom: 60px;
+    }
+
+    .items {
+        padding: 15px;
+        min-height: 160px;
+    }
+
+    #item2 {
+        border-bottom-left-radius: 0px;
+    }
+    
+    #dollar {
+        font-size: 25px;
+    }
+
+    #item3 {
+        border-bottom-left-radius: 10px;
+    }
+
+    .attribution {
+        font-size: 9px;
+    }
+}
